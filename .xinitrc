@@ -23,7 +23,7 @@ xsetroot -cursor_name left_ptr
 # Mouse acceleration
 xinput --set-prop 10 'libinput Accel Profile Enabled' 0, 1
 xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 1
-
+xinput --set-prop 12 'libinput Accel Profile Enabled' 0, 1
 # Keyboard
 setxkbmap pl
 
