@@ -26,29 +26,16 @@ super + shift + r
 super + {_,shift + }q
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
 #
 # state/flags
 #
+# toggle between tiled and monocle layout
+super + f
+	bspc desktop -l next
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+super + {t,s}
+	bspc node -t {tiled,floating}
 
 #
 # focus/swap
@@ -80,41 +67,45 @@ super + {Left,Down,Up,Right}
 
 # Multimedia keys
 XF86AudioRaiseVolume
-  amixer -q set Master 5%+ unmute
+    amixer -q set Master 5%+ unmute
 
 # Still muøltimedia
 XF86AudioLowerVolume
-  amixer -q set Master 5%- unmute
+    amixer -q set Master 5%- unmute
 
 # still
 XF86AudioMute
-  amixer -D pulse sset Master toggle-mute
+    amixer -D pulse sset Master toggle-mute
   
 # Brightness up
 XF86MonBrightnessUp
-  xbacklight -inc 5
+    xbacklight -inc 5
 
 # And brightness down
 XF86MonBrightnessDown
-  xbacklight -dec 5
+    xbacklight -dec 5
 
 # Screenshot
 Print
-  flameshot gui
+    flameshot gui
 
 # Shortcuts
+
+# Brave
 super + w 
-  brave 
-
+    brave 
+# File explorer
 super + n 
-  pcmanfm  
-
+    pcmanfm  
+# Show keybindings
 super + F1
-  ~/.config/bspwm/scripts/keybindings_rofi.sh
-
+    ~/.config/bspwm/scripts/keybindings_rofi.sh
+# Htop
 ctrl + super + Delete
-  alacritty -e htop
+    alacritty -e htop
+# Discord
 super + b
 	discord
+# Spotify
 super + a 
-	spotify
+    spotify
