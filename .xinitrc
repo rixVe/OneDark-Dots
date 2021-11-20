@@ -16,7 +16,7 @@ xset -dpms
 xset s noblank
 xset s off
 
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr 
 
 setxkbmap pl
 xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 1
